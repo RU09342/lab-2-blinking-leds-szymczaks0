@@ -4,13 +4,13 @@
 
 SHELL = cmd.exe
 
-CG_TOOL_ROOT := C:/ti/ccsv7/tools/compiler/ti-cgt-msp430_16.9.1.LTS
+CG_TOOL_ROOT := C:/ti/ccsv7/tools/compiler/ti-cgt-msp430_16.9.4.LTS
 
 GEN_OPTS__FLAG := 
 GEN_CMDS__FLAG := 
 
 ORDERED_OBJS += \
-"./main.obj" \
+"./blink.obj" \
 "../lnk_msp430fr2311.cmd" \
 $(GEN_CMDS__FLAG) \
 -llibc.a \
@@ -120,41 +120,41 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXE_OUTPUTS += \
-simple_blink_FR2311.out \
+multiple_blink_FR2311.out \
 
 EXE_OUTPUTS__QUOTED += \
-"simple_blink_FR2311.out" \
+"multiple_blink_FR2311.out" \
 
 BIN_OUTPUTS += \
-simple_blink_FR2311.hex \
+multiple_blink_FR2311.hex \
 
 BIN_OUTPUTS__QUOTED += \
-"simple_blink_FR2311.hex" \
+"multiple_blink_FR2311.hex" \
 
 
 # All Target
 all: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
-	@$(MAKE) --no-print-directory -Onone "simple_blink_FR2311.out"
+	@$(MAKE) --no-print-directory -Onone "multiple_blink_FR2311.out"
 
 # Tool invocations
-simple_blink_FR2311.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
+multiple_blink_FR2311.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: MSP430 Linker'
-	"C:/ti/ccsv7/tools/compiler/ti-cgt-msp430_16.9.1.LTS/bin/cl430" -vmspx --use_hw_mpy=none --advice:power=all --advice:hw_config=all --define=__MSP430FR2311__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"simple_blink_FR2311.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"C:/ti/ccsv7/ccs_base/msp430/include" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-msp430_16.9.1.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-msp430_16.9.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="simple_blink_FR2311_linkInfo.xml" --use_hw_mpy=none --rom_model -o "simple_blink_FR2311.out" $(ORDERED_OBJS)
+	"C:/ti/ccsv7/tools/compiler/ti-cgt-msp430_16.9.4.LTS/bin/cl430" -vmspx --use_hw_mpy=none --advice:power=all --advice:hw_config=all --define=__MSP430FR2311__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"multiple_blink_FR2311.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"C:/ti/ccsv7/ccs_base/msp430/include" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-msp430_16.9.4.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-msp430_16.9.4.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="multiple_blink_FR2311_linkInfo.xml" --use_hw_mpy=none --rom_model -o "multiple_blink_FR2311.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
-simple_blink_FR2311.hex: $(EXE_OUTPUTS)
+multiple_blink_FR2311.hex: $(EXE_OUTPUTS)
 	@echo 'Invoking: MSP430 Hex Utility'
-	"C:/ti/ccsv7/tools/compiler/ti-cgt-msp430_16.9.1.LTS/bin/hex430" --memwidth=8 --romwidth=8 -o "simple_blink_FR2311.hex" $(EXE_OUTPUTS__QUOTED)
+	"C:/ti/ccsv7/tools/compiler/ti-cgt-msp430_16.9.4.LTS/bin/hex430" --memwidth=8 --romwidth=8 -o "multiple_blink_FR2311.hex" $(EXE_OUTPUTS__QUOTED)
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
 	-$(RM) $(BIN_OUTPUTS__QUOTED)$(EXE_OUTPUTS__QUOTED)
-	-$(RM) "main.obj" 
-	-$(RM) "main.d" 
+	-$(RM) "blink.obj" 
+	-$(RM) "blink.d" 
 	-@echo 'Finished clean'
 	-@echo ' '
 

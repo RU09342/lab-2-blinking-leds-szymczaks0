@@ -23,7 +23,7 @@
 int main(void) {
     WDTCTL = WDTPW | WDTHOLD;       // Stop watchdog timer
     P1DIR |= 0x01;                  // Set P1.0 to output direction
-
+    PM5CTL0 &= ~LOCKLPM5;
     for(;;) {
         volatile unsigned int i;    // volatile to prevent optimization
 
