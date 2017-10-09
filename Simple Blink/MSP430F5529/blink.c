@@ -18,6 +18,7 @@
 //  Built with Code Composer Studio v5
 //***************************************************************************************
 
+//SIMPLE BLINK FOR F5529
 #include <msp430.h>				
 
 int main(void) {

@@ -1,20 +1,6 @@
-//***************************************************************************************
-//  MSP430 Blink the LED Demo - Software Toggle P1.0
-//
-//  Description; Toggle P1.0 by xor'ing P1.0 inside of a software loop.
-//  ACLK = n/a, MCLK = SMCLK = default DCO
-//
-//                MSP430x5xx
-//             -----------------
-//         /|\|              XIN|-
-//          | |                 |
-//          --|RST          XOUT|-
-//            |                 |
-//            |             P1.0|-->LED
-//
-//  Texas Instruments, Inc
-//  July 2013
-//***************************************************************************************
+/*AUTHOR: STEPHEN SZYMCZAK
+ * BUTTON BLINK FOR FR6989
+ */
 
 #include <msp430.h>
 
@@ -45,3 +31,4 @@ __interrupt void PORT_1(void)
     P1IFG &= ~BIT1; //P1.5 IFG CLEARED
     P1IES ^= BIT1; //TOGGLE INTERRUPT EDGE
 }
+

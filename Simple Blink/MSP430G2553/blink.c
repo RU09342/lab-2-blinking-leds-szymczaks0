@@ -18,6 +18,7 @@
 //  Built with Code Composer Studio v5
 //***************************************************************************************
 
+//SIMPLE BLINK FOR G2553
 #include <msp430.h>				
 
 int main(void) {
@@ -26,7 +27,7 @@ int main(void) {
 	P1DIR |= 0x01;					// Set P1.0 to output direction
 
 
-	for(;;) {
+	for(;;) {                       //loop forever
 		volatile unsigned int i;	// volatile to prevent optimization
 
 		P1OUT ^= 0x01;				// Toggle P1.0 using exclusive-OR
@@ -35,6 +36,4 @@ int main(void) {
 		do i--;
 		while(i != 0);
 	}
-	
-	return 0;
 }

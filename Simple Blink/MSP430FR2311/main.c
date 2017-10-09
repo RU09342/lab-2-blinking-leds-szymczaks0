@@ -18,6 +18,8 @@
 //  Built with Code Composer Studio v5
 //***************************************************************************************
 
+//SIMPLE BLINK FOR FR2311
+
 #include <msp430.h>
 
 int main(void) {

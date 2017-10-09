@@ -1,7 +1,7 @@
 ******************************************************************************
                   MSP430 Linker PC v16.9.4                     
 ******************************************************************************
->> Linked Tue Sep 19 18:35:02 2017
+>> Linked Sun Oct 08 21:27:25 2017
 
 OUTPUT FILE NAME:   <button_blink_FR6989.out>
 ENTRY POINT SYMBOL: "_c_int00_noinit_noargs_noexit_mpu"  address: 00004400

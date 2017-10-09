@@ -1,7 +1,7 @@
 ******************************************************************************
                   MSP430 Linker PC v16.9.4                     
 ******************************************************************************
->> Linked Tue Sep 19 18:21:30 2017
+>> Linked Mon Sep 25 20:40:56 2017
 
 OUTPUT FILE NAME:   <button_blink_G2553.out>
 ENTRY POINT SYMBOL: "_c_int00_noinit_noargs_noexit"  address: 0000c026
