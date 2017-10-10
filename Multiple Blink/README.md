@@ -6,7 +6,7 @@ After completing simple blink, a logical next step is seeing how that code can b
 ## Dependencies
 msp430.h is required in the main file.
 
-## Usage
+## Implementation
 This project depends heavily on the code used for simple blink. The main difference is setting up a second output pin, and making that second pin blink at a different rate.
 
 Simple blink utilized this common forever loop with toggling output:
