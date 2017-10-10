@@ -34,9 +34,9 @@ __interrupt void PORT_1(void)
 }
 ```
 ## Known Errors:
-*There is no debouncing. This code is useful only as a learning tool.
+* There is no debouncing. This code is useful only as a learning tool.
 
-#EXTRA work: Button Toggle Blink Rate for the G2553
+# EXTRA work: Button Toggle Blink Rate for the G2553
 Utilizing and modifying this common blink rate code:
 ```
 for(;;) {                       //loop forever
