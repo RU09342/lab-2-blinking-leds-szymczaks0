@@ -14,7 +14,7 @@ Utilizing already written code, the G2553 processor is removed from its developm
 ### 1. Remove power from the launchpad (micro USB cable)
 ### 2. Connect, with wires, 3.3V pin on the launchpad to the + rail on the breadboard & the GND pin on the launchpad to the - rail on the breadboard.
 
-### 3.  The bare minimum to flash two LEDs with the G2553 on a breadboard are 5 pin connects: 
+### 3.  The bare minimum to flash two LEDs with the G2553 on a breadboard are 5 pin connections: 
    * VCC
    * GND
    * !RST
