@@ -20,13 +20,13 @@ Utilizing already written code, the G2553 processor is removed from its developm
    * !RST
    * P1.0 (LED 1)
    * P1.6 (LED 2)
-### VCC
+#### VCC
    VCC will be connected, with a wire, to the + rail on the breadboard.
-### GND
+#### GND
    GND will be connected, with a wire, to the - rail on the breadboard.
-### !RST
+#### !RST
    This is the negative logic reset, for our purposes this will simply be connected, with a 4.6k resistor, to the + rail on the breadboard.
-### P1.0 (LED 1) & P1.6 (LED 2)
+#### P1.0 (LED 1) & P1.6 (LED 2)
    P1.0 will be connected, with a 4.6k resistor, to the anode of an LED, the cathode of the LED will be connected, with a wire, to the - rail on the breadboard. Repeat this step with P1.6.
 ### 4.  Plug the launchpad back into power (micro USB)
 
