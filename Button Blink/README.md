@@ -5,7 +5,7 @@
 ## Dependencies:
 msp430.h must be included in the main file.
 
-## Usage:
+## Implementation:
 This code sets a pin up as an output, the ones selected are connected to onboard LEDs.
 ```
 PxDIR |= BITy; //sets Px.y as output 
